@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include("../partials/head.ejs", {title: "Create"}) %> 
+
+<body>
+    
+    <%-include("../partials/header.ejs") %> 
+
+    <div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/games/create" method="POST" enctype="multipart/form-data">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="nombre" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="precio" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="descuento" class="form-label">Descuento:</label>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+					</div>
+					
+                    <div>
+						<label for="image"> Seleccionar Imagen </label>
+                        <input type="file" name="image" />
+	                </div>
+					
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+        
+    <%-include("../partials/footer.ejs") %> 
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include("./partials/head.ejs", {title: "HOME"}) %> 
+
+<body class="grid-container">
+    
+    <%-include("./partials/header.ejs") %> 
+
+    <main class="container">
+
+        <% games.forEach(game => { %> 
+        <section class="caja" >
+           
+            <div>
+            <img class="producto imagen1" src="<%= game.image %> " alt=""   >
+            </div>
+            <div>
+            <p class="bold"> PRECIO: <%= game.precio %></p>
+            <p class="verde"> DESCUENTO<%= game.descuento %> Off </p>
+            <p class="gris"> <%= game.nombre %></p>
+            </div>
+           
+        </section>
+     <% }) %>
+
+    </main>
+
+    <%-include("./partials/footer.ejs") %> 
+
+</body>
+</html>
